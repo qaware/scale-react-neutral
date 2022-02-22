@@ -1,5 +1,5 @@
 {
-  "name": "@qaware/scale-react",
+  "name": "@qaware/scale-react-neutral",
   "version": "0.0.31",
   "description": "react implementation of scale components",
   "main": "dist/index.js",

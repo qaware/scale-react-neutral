@@ -1,4 +1,4 @@
-# @qaware/scale-react
+# @qaware/scale-react-neutral
 
 This project aims to reimplement the web components of [Telekom Scale](https://github.com/telekom/scale) as native
 react components using the original css. This library replaces `@telekom/scale-components-react-neutral`
@@ -19,7 +19,7 @@ Currently, the project is not present in the central npm repository.
 in your index.tsx or App.tsx, import the base css:
 
 ```javascript
-import '@qaware/scale-react-qaware/dist/qaware-scale-react.css';
+import '@qaware/scale-react-neutral/dist/qaware-scale-react.css';
 import '@telekom/scale-components-neutral/dist/scale-components/scale-components.css';
 ```
 
@@ -28,7 +28,7 @@ import '@telekom/scale-components-neutral/dist/scale-components/scale-components
 In your code import and use the components like this:
 
 ```javascript
-import {ScaleTextarea} from '@qaware/scale-react';
+import {ScaleTextarea} from '@qaware/scale-react-neutral';
 ```
 
 The source contains Storybook examples for every component, showing its usage. In general, the components try to be as
@@ -67,44 +67,44 @@ are continuously rerendered by React and then rehydrated by Scale.
 
 ## Available components
 
-| scale-component            | @qaware/scale-react | status                         |
-|----------------------------|---------------------|--------------------------------|
-| scale-accordion            | ScaleAccordion      | implemented                    |
-| scale-breadcrumb           | -                   | not implemented                |
-| scale-button               | ScaleButton         | implemented                    |
-| scale-card                 | -                   | not implemented                |
-| scale-checkbox-group       | -                   | not implemented                |
-| scale-checkbox             | ScaleCheckbox       | implemented                    |
-| scale-data-grid            | -                   | not implemented                |
-| scale-date-picker          | -                   | not implemented                |
-| scale-divider              | ScaleDivider        | implemented                    |
-| scale-dropdown             | ScaleDropdown       | implemented                    |
-| scale-menu-flyout          | -                   | not implemented                |
-| scale-icon                 | ScaleIcon           | implemented                    |
-| scale-link                 | ScaleLink           | implemented                    |
-| scale-list                 | -                   | not implemented                |
-| scale-modal                | ScaleModal          | implemented                    |
-| scale-pagination           | ScalePagination     | implemented                    |
-| scale-progress-bar         | -                   | not implemented                |
-| scale-radio-button-group   | -                   | not implemented                |
-| scale-radio-button         | -                   | not implemented                |
-| scale-rating-stars         | -                   | not implemented                |
-| scale-sidebar-navigation   | -                   | not implemented                |
-| scale-slider               | -                   | not implemented                |
-| scale-switch               | ScaleSwitch         | implemented                    |
-| scale-tab-nav              | -                   | not implemented                |
-| scale-table                | ScaleTable          | implemented                    |
-| scale-tag                  | -                   | not implemented                |
-| scale-text-area            | ScaleTextarea       | implemented                    |
-| scale-text-field           | ScaleTextField      | implemented                    |
-| scale-callout              | -                   | not implemented                |
-| scale-notification-badge   | -                   | not implemented                |
-| scale-notification-banner  | -                   | not implemented                |
-| scale-notification-message | -                   | icons missing in scale-neutral |
-| scale-notification-toast   | .                   | icons missing in scale-neutral |
-| scale-toggle-group         | -                   | not implemented                |
-| scale-tooltip              | -                   | not implemented                |
-| scale-checkbox-group       | -                   | not implemented                |
+| scale-component            | @qaware/scale-react-neutral | status                         |
+|----------------------------|-----------------------------|--------------------------------|
+| scale-accordion            | ScaleAccordion              | implemented                    |
+| scale-breadcrumb           | -                           | not implemented                |
+| scale-button               | ScaleButton                 | implemented                    |
+| scale-card                 | -                           | not implemented                |
+| scale-checkbox-group       | -                           | not implemented                |
+| scale-checkbox             | ScaleCheckbox               | implemented                    |
+| scale-data-grid            | -                           | not implemented                |
+| scale-date-picker          | -                           | not implemented                |
+| scale-divider              | ScaleDivider                | implemented                    |
+| scale-dropdown             | ScaleDropdown               | implemented                    |
+| scale-menu-flyout          | -                           | not implemented                |
+| scale-icon                 | ScaleIcon                   | implemented                    |
+| scale-link                 | ScaleLink                   | implemented                    |
+| scale-list                 | -                           | not implemented                |
+| scale-modal                | ScaleModal                  | implemented                    |
+| scale-pagination           | ScalePagination             | implemented                    |
+| scale-progress-bar         | -                           | not implemented                |
+| scale-radio-button-group   | -                           | not implemented                |
+| scale-radio-button         | -                           | not implemented                |
+| scale-rating-stars         | -                           | not implemented                |
+| scale-sidebar-navigation   | -                           | not implemented                |
+| scale-slider               | -                           | not implemented                |
+| scale-switch               | ScaleSwitch                 | implemented                    |
+| scale-tab-nav              | -                           | not implemented                |
+| scale-table                | ScaleTable                  | implemented                    |
+| scale-tag                  | -                           | not implemented                |
+| scale-text-area            | ScaleTextarea               | implemented                    |
+| scale-text-field           | ScaleTextField              | implemented                    |
+| scale-callout              | -                           | not implemented                |
+| scale-notification-badge   | -                           | not implemented                |
+| scale-notification-banner  | -                           | not implemented                |
+| scale-notification-message | -                           | icons missing in scale-neutral |
+| scale-notification-toast   | .                           | icons missing in scale-neutral |
+| scale-toggle-group         | -                           | not implemented                |
+| scale-tooltip              | -                           | not implemented                |
+| scale-checkbox-group       | -                           | not implemented                |
 
 In addition, all icons from the neutral theme are available as react components.
 
