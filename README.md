@@ -10,7 +10,7 @@ Currently, this project is not published to the central npm repository.
 ### Build
 
 - clone git repo
-- `npm intall && npm run build`
+- `npm install && npm run build`
 - use [npm link](https://docs.npmjs.com/cli/v8/commands/npm-link) to make the components available in your project.
 
 ### CSS
