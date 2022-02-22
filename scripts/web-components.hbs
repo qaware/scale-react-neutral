@@ -1,0 +1,26 @@
+import {AriaAttributes, CSSProperties, DOMAttributes, ReactNode, Ref} from 'react'
+
+declare global {
+    interface ScaleWebComponentProps {
+        children?: ReactNode
+        class?: string
+        ref?: Ref<HTMLElement>
+        slot?: string
+        part?: string
+        style?: CSSProperties
+    }
+
+    namespace JSX {
+        interface IntrinsicElements {
+{{#each entries}}           '{{this}}': ScaleWebComponentProps{{#unless @last}},{{/unless}}
+{{/each}}
+        }
+    }
+}
+
+declare module 'react' {
+    interface HTMLAttributes<T> extends AriaAttributes, DOMAttributes<T> {
+        part?: string
+        slot?: string
+    }
+}

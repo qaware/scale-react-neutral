@@ -1,0 +1,41 @@
+import React, {FunctionComponent} from 'react';
+import {defaultValue} from "../../Utils";
+import {IconsProps} from "../../icon/IconsProps";
+import '@telekom/scale-components-neutral/dist/collection/components/icon/icon.css'
+
+export const {{className}}: FunctionComponent<IconsProps> = (props) => {
+    const size = defaultValue(props.size, 24);
+    const fill = defaultValue(props.fill, 'currentColor');
+    const color = defaultValue(props.color, 'currentColor');
+    const selected = defaultValue(props.selected, false);
+    const decorative = defaultValue(props.decorative, false);
+    const accessibilityTitle = props.accessibilityTitle;
+    const focusable = defaultValue(props.focusable, false);
+    const className = ['hydrated'];
+    if(props.className !== undefined){
+        className.push(props.className);
+    }
+    return (
+    <{{tagName}} class={className.join(' ')} slot={props.slot} style={ {display: 'inline-flex'} } part={props.part}>
+        <svg className="scale-icon"
+             xmlns="http://www.w3.org/2000/svg"
+             width={size} height={size}
+             viewBox="{{viewBox}}"
+             aria-hidden={decorative}
+             tabIndex={focusable ? 0 : undefined}
+             style={ {display: 'inline-flex'} }
+             onClick={props.onClick}
+             onKeyDown={props.onKeyDown}>
+            {accessibilityTitle && <title>{accessibilityTitle}</title>}
+            <g fill={((fill === 'currentColor') ? color : fill)}>
+                {selected &&
+                <g dangerouslySetInnerHTML={ {__html: '{{{markup.selected}}}'} } />
+                }
+                {!selected &&
+                <g dangerouslySetInnerHTML={ {__html: '{{{markup.default}}}'} } />
+                }
+            </g>
+        </svg>
+    </{{tagName}}>
+    );
+}
