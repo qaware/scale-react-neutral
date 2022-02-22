@@ -69,7 +69,7 @@ are continuously re-rendered by React and then rehydrated by Scale.
 | **Regular Scale component** | **@qaware/scale-react-neutral** | **Status** | **Remarks**                    |
 |-----------------------------|---------------------------------|------------|--------------------------------|
 | scale-accordion             | ScaleAccordion                  | ✅          |                                |
-| scale-breadcrumb            | -                               | ✅          |                                |
+| scale-breadcrumb            | ScaleBreadcrumb                 | ✅          |                                |
 | scale-button                | ScaleButton                     | ✅          |                                |
 | scale-card                  | -                               | ❌          |                                |
 | scale-checkbox-group        | -                               | ❌          |                                |
