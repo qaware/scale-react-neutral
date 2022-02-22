@@ -71,7 +71,7 @@ are continuously re-rendered by React and then rehydrated by Scale.
 | scale-accordion             | ScaleAccordion                  | ✅          |                                |
 | scale-breadcrumb            | ScaleBreadcrumb                 | ✅          |                                |
 | scale-button                | ScaleButton                     | ✅          |                                |
-| scale-card                  | -                               | ❌          |                                |
+| scale-card                  | ScaleCard                       | ✅          |                                |
 | scale-checkbox-group        | -                               | ❌          |                                |
 | scale-checkbox              | ScaleCheckbox                   | ✅          |                                |
 | scale-data-grid             | -                               | ❌          |                                |
