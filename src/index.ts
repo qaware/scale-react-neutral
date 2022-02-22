@@ -1,4 +1,5 @@
 export * from './components/accordion/ScaleAccordion';
+export * from './components/breadcrumb/ScaleBreadcrumb';
 export * from './components/button/ScaleButton';
 export * from './components/checkbox/ScaleCheckbox';
 export * from './components/icon/ScaleIcon';
