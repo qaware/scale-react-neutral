@@ -103,7 +103,6 @@ are continuously re-rendered by React and then rehydrated by Scale.
 | scale-notification-toast    | -                               |            | icons missing in scale-neutral |
 | scale-toggle-group          | -                               | ❌          |                                |
 | scale-tooltip               | -                               | ❌          |                                |
-| scale-checkbox-group        | -                               | ❌          |                                |
 
 In addition, all icons from the neutral theme are available as react components.
 
