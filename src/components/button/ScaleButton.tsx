@@ -1,9 +1,9 @@
-import React, {FunctionComponent, HTMLAttributeAnchorTarget, MouseEventHandler, useRef} from 'react';
+import React, {HTMLAttributeAnchorTarget, MouseEventHandler, useRef} from 'react';
 import ShadowDom from '../ShadowDom'
 import css from '!!raw-loader!postcss-loader!@telekom/scale-components-neutral/dist/collection/components/button/button.css'
-import {defaultValue} from "../Utils";
-import {To} from "history";
-import {AnchorOrLink} from "../../custom/AnchorOrLink";
+import {defaultValue} from '../Utils';
+import {To} from 'history';
+import {AnchorOrLink} from '../../custom/AnchorOrLink';
 
 
 /**
@@ -22,12 +22,11 @@ export type ScaleButtonProps = {
     to?: To
     target?: HTMLAttributeAnchorTarget
     download?: string
-    autoFocus?: boolean
     innerTabindex?: number
     onClick?: MouseEventHandler<HTMLButtonElement>
 }
 
-export const ScaleButton:FunctionComponent<ScaleButtonProps> = (props) => {
+export const ScaleButton = React.forwardRef<HTMLAnchorElement & HTMLButtonElement, ScaleButtonProps>((props, ref) => {
     const variant = defaultValue(props.variant, 'primary');
     const size = defaultValue(props.size, 'large');
     const iconPosition = defaultValue(props.iconPosition, 'after');
@@ -59,6 +58,7 @@ export const ScaleButton:FunctionComponent<ScaleButtonProps> = (props) => {
                 <style>{css.toString()}</style>
                 {renderLink &&
                     <AnchorOrLink
+                        ref={ref}
                         className={className.join(' ')}
                         href={props.href}
                         to={props.to}
@@ -74,11 +74,11 @@ export const ScaleButton:FunctionComponent<ScaleButtonProps> = (props) => {
                 {!renderLink &&
                     <button
                         id={props.id}
+                        ref={ref}
                         onClick={props.onClick}
                         className={className.join(' ')}
                         disabled={disabled}
                         type={type}
-                        autoFocus={props.autoFocus}
                         part={basePart.join(' ')}
                         tabIndex={props.innerTabindex}>
                         <slot/>
@@ -87,4 +87,4 @@ export const ScaleButton:FunctionComponent<ScaleButtonProps> = (props) => {
             {props.children}
         </scale-button>
     );
-}
+});
