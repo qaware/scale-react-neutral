@@ -2,7 +2,6 @@ import React, {
     ChangeEventHandler,
     FocusEventHandler,
     FormEventHandler,
-    FunctionComponent,
     KeyboardEventHandler,
     useState
 } from 'react';
@@ -51,7 +50,7 @@ export type ScaleTextFieldProps = {
 }
 
 
-export const ScaleTextField: FunctionComponent<ScaleTextFieldProps> = (props) => {
+export const ScaleTextField = React.forwardRef<HTMLInputElement, ScaleTextFieldProps>((props, ref) => {
     const [generatedId] = useId(1, 'text-field-');
     const id = defaultValue(props.id, generatedId);
     const type = defaultValue(props.type, 'text');
@@ -97,6 +96,7 @@ export const ScaleTextField: FunctionComponent<ScaleTextFieldProps> = (props) =>
                     {props.label}
                 </label>
                 <input
+                    ref={ref}
                     type={type}
                     className="text-field__control"
                     value={props.value}
@@ -141,4 +141,4 @@ export const ScaleTextField: FunctionComponent<ScaleTextFieldProps> = (props) =>
             </div>
         </scale-text-field>
     );
-}
+});
