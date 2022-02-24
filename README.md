@@ -1,24 +1,25 @@
-# @qaware/scale-react-neutral
+# @qaware-oss/scale-react-neutral
 
 This project aims to reimplement the web components of [Telekom Scale](https://github.com/telekom/scale) as dedicated
 react components using the original css. This library replaces `@telekom/scale-components-react-neutral`.
 
 ## Usage
 
-Currently, this project is not published to the central npm repository.
+The project is available in the central npm repository. Just add the following snippet to your package.json:
 
-### Build
+```json
+"dependencies": {
+    "@qaware-oss/scale-react-neutral": "^0.2.0",
+}
+```
 
-- clone git repo
-- `npm install && npm run build`
-- use [npm link](https://docs.npmjs.com/cli/v8/commands/npm-link) to make the components available in your project.
 
 ### CSS
 
 In your `index.tsx` or `App.tsx`, import the base css:
 
 ```javascript
-import '@qaware/scale-react-neutral/dist/qaware-scale-react.css';
+import '@qaware-oss/scale-react-neutral/dist/qaware-scale-react.css';
 import '@telekom/scale-components-neutral/dist/scale-components/scale-components.css';
 ```
 
@@ -27,11 +28,15 @@ import '@telekom/scale-components-neutral/dist/scale-components/scale-components
 In your code import and use the components like this:
 
 ```javascript
-import {ScaleTextarea} from '@qaware/scale-react-neutral';
+import {ScaleTextarea} from '@qaware-oss/scale-react-neutral';
 ```
 
 The source contains Storybook examples for every component, showing its usage. In general, the components attempt to
 match the original Scale API as closely as possible.
+
+### Build
+
+If you want to build the project yourself, just run `npm install && npm run build`
 
 ## Motivation
 
@@ -66,43 +71,43 @@ are continuously re-rendered by React and then rehydrated by Scale.
 
 ## Available components
 
-| **Regular Scale component** | **@qaware/scale-react-neutral** | **Status** | **Remarks**                    |
-|-----------------------------|---------------------------------|------------|--------------------------------|
-| scale-accordion             | ScaleAccordion                  | ✅          |                                |
-| scale-breadcrumb            | ScaleBreadcrumb                 | ✅          |                                |
-| scale-button                | ScaleButton                     | ✅          |                                |
-| scale-card                  | ScaleCard                       | ✅          |                                |
-| scale-checkbox-group        | -                               | ❌          |                                |
-| scale-checkbox              | ScaleCheckbox                   | ✅          |                                |
-| scale-data-grid             | -                               | ❌          |                                |
-| scale-date-picker           | -                               | ❌          |                                |
-| scale-divider               | ScaleDivider                    | ✅          |                                |
-| scale-dropdown              | ScaleDropdown                   | ✅          |                                |
-| scale-menu-flyout           | -                               | ❌          |                                |
-| scale-icon                  | ScaleIcon                       | ✅          |                                |
-| scale-link                  | ScaleLink                       | ✅          |                                |
-| scale-list                  | -                               | ❌          |                                |
-| scale-modal                 | ScaleModal                      | ✅          |                                |
-| scale-pagination            | ScalePagination                 | ✅          |                                |
-| scale-progress-bar          | -                               | ❌          |                                |
-| scale-radio-button-group    | -                               | ❌          |                                |
-| scale-radio-button          | -                               | ❌          |                                |
-| scale-rating-stars          | -                               | ❌          |                                |
-| scale-sidebar-navigation    | -                               | ❌          |                                |
-| scale-slider                | -                               | ❌          |                                |
-| scale-switch                | ScaleSwitch                     | ✅          |                                |
-| scale-tab-nav               | -                               | ❌          |                                |
-| scale-table                 | ScaleTable                      | ✅          |                                |
-| scale-tag                   | -                               | ❌          |                                |
-| scale-text-area             | ScaleTextarea                   | ✅          |                                |
-| scale-text-field            | ScaleTextField                  | ✅          |                                |
-| scale-callout               | -                               | ❌          |                                |
-| scale-notification-badge    | -                               | ❌          |                                |
-| scale-notification-banner   | -                               | ❌          |                                |
-| scale-notification-message  | -                               |            | icons missing in scale-neutral |
-| scale-notification-toast    | -                               |            | icons missing in scale-neutral |
-| scale-toggle-group          | -                               | ❌          |                                |
-| scale-tooltip               | -                               | ❌          |                                |
+| **Regular Scale component** | **@qaware-oss/scale-react-neutral** | **Status** | **Remarks**                    |
+|-----------------------------|-------------------------------------|------------|--------------------------------|
+| scale-accordion             | ScaleAccordion                      | ✅          |                                |
+| scale-breadcrumb            | ScaleBreadcrumb                     | ✅          |                                |
+| scale-button                | ScaleButton                         | ✅          |                                |
+| scale-card                  | ScaleCard                           | ✅          |                                |
+| scale-checkbox-group        | -                                   | ❌          |                                |
+| scale-checkbox              | ScaleCheckbox                       | ✅          |                                |
+| scale-data-grid             | -                                   | ❌          |                                |
+| scale-date-picker           | -                                   | ❌          |                                |
+| scale-divider               | ScaleDivider                        | ✅          |                                |
+| scale-dropdown              | ScaleDropdown                       | ✅          |                                |
+| scale-menu-flyout           | -                                   | ❌          |                                |
+| scale-icon                  | ScaleIcon                           | ✅          |                                |
+| scale-link                  | ScaleLink                           | ✅          |                                |
+| scale-list                  | -                                   | ❌          |                                |
+| scale-modal                 | ScaleModal                          | ✅          |                                |
+| scale-pagination            | ScalePagination                     | ✅          |                                |
+| scale-progress-bar          | -                                   | ❌          |                                |
+| scale-radio-button-group    | -                                   | ❌          |                                |
+| scale-radio-button          | -                                   | ❌          |                                |
+| scale-rating-stars          | -                                   | ❌          |                                |
+| scale-sidebar-navigation    | -                                   | ❌          |                                |
+| scale-slider                | -                                   | ❌          |                                |
+| scale-switch                | ScaleSwitch                         | ✅          |                                |
+| scale-tab-nav               | -                                   | ❌          |                                |
+| scale-table                 | ScaleTable                          | ✅          |                                |
+| scale-tag                   | -                                   | ❌          |                                |
+| scale-text-area             | ScaleTextarea                       | ✅          |                                |
+| scale-text-field            | ScaleTextField                      | ✅          |                                |
+| scale-callout               | -                                   | ❌          |                                |
+| scale-notification-badge    | -                                   | ❌          |                                |
+| scale-notification-banner   | -                                   | ❌          |                                |
+| scale-notification-message  | -                                   |            | icons missing in scale-neutral |
+| scale-notification-toast    | -                                   |            | icons missing in scale-neutral |
+| scale-toggle-group          | -                                   | ❌          |                                |
+| scale-tooltip               | -                                   | ❌          |                                |
 
 In addition, all icons from the neutral theme are available as react components.
 
