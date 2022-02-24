@@ -1,4 +1,4 @@
-import React, {HTMLAttributeAnchorTarget, MouseEventHandler, useRef} from 'react';
+import React, {HTMLAttributeAnchorTarget, MouseEventHandler, PropsWithChildren, useRef} from 'react';
 import ShadowDom from '../ShadowDom'
 import css from '!!raw-loader!postcss-loader!@telekom/scale-components-neutral/dist/collection/components/button/button.css'
 import {defaultValue} from '../Utils';
@@ -26,7 +26,7 @@ export type ScaleButtonProps = {
     onClick?: MouseEventHandler<HTMLButtonElement>
 }
 
-export const ScaleButton = React.forwardRef<HTMLAnchorElement & HTMLButtonElement, ScaleButtonProps>((props, ref) => {
+export const ScaleButton = React.forwardRef<HTMLAnchorElement & HTMLButtonElement, PropsWithChildren<ScaleButtonProps>>((props, ref) => {
     const variant = defaultValue(props.variant, 'primary');
     const size = defaultValue(props.size, 'large');
     const iconPosition = defaultValue(props.iconPosition, 'after');
